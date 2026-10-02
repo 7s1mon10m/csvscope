@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 报告导出（--dump-json 的产物）
+report.json
+*.report.json
+
+# 本地编辑器
+.vscode/
+.idea/
+.DS_Store

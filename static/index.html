@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>csvscope</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>csvscope <span id="fname"></span></h1>
+  </header>
+
+  <div id="meta" class="meta"></div>
+
+  <section id="progress" class="progress">
+    <div class="row">
+      <span id="phase">正在准备…</span>
+      <span id="ptext" class="num"></span>
+    </div>
+    <div class="track"><div id="fill" class="fill indet"></div></div>
+  </section>
+
+  <section id="error" class="error hidden"></section>
+
+  <main id="report" class="hidden">
+    <div id="notes"></div>
+
+    <section class="card">
+      <h2>列</h2>
+      <div id="colhead" class="colrow" style="cursor:default;color:var(--ink-faint);font-size:11px;letter-spacing:.04em">
+        <div>名称</div><div>类型</div><div>缺失</div><div>唯一值</div><div>分布</div><div></div>
+      </div>
+      <div id="columns"></div>
+    </section>
+
+    <section class="card" id="corrcard">
+      <h2>强相关 · |r| ≥ 0.5</h2>
+      <div id="correlations"></div>
+    </section>
+  </main>
+
+  <footer>数据没有离开过这台机器 · 只读，不改你的文件</footer>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
